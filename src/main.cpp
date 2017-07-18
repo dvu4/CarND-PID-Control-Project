@@ -40,19 +40,19 @@ int main()
   //pid.Init(0.03, 0.5, 0.10);
 
 
-  //pid_throttle.Init(0.085, 0.0003, 1.35);
+  //pid_steering.Init(0.085, 0.0003, 1.35);
   //pid_throttle.Init(0.2, 0.0000, 0.01);
 
   // twiddle update - error: 803.649
-  //pid_throttle.Init(0.134611 0.000276054, 3.0903);
+  //pid_steering.Init(0.134611 0.000276054, 3.0903);
   //pid_throttle.Init(0.316731, 0.0000, 0.0228911);
 
   // twiddle update - error: 782.494 - max throttle 0.7
-  // pid_throttle.Init(0.134611, 0.000270736, 3.05349);
+  // pid_steering.Init(0.134611, 0.000270736, 3.05349);
   // pid_throttle.Init(0.316731, 0.0000, 0.0226185);
 
   // twiddle update - error:  - max throttle 0.8
-  //pid_throttle.Init(0.134611, 0.000270736, 3.05349); 
+  //pid_steering.Init(0.134611, 0.000270736, 3.05349); 
   //pid_throttle.Init(0.316731, 0.0000, 0.0226185); 
   pid_steering.Init(0.125, 0.0001, 2.0);
   pid_throttle.Init(0.1, 0.0001, 0.5);
@@ -91,7 +91,7 @@ int main()
           // update error and calculate throttle_value at each step
           pid_throttle.UpdateError(fabs(cte));     // |cte|
           //pid_throttle.UpdateError(pow(cte, 2));   // cte^2  
-          throttle_value = 0.78 + pid_throttle.TotalError();
+          throttle_value = 0.75 + pid_throttle.TotalError();
 
           // DEBUG
           double P = - pid_steering.Kp * pid_steering.p_error;

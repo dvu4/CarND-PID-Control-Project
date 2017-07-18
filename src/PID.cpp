@@ -23,11 +23,12 @@ void PID::Init(double Kp, double Ki, double Kd) {
 
     // Twiddling parameters
     p = {Kp, Kd, Ki};
-    dp = {1, 1, 1};
+    dp = {0.1*Kp, 0.1*Kd, 0.1*Ki};
+    //dp = {1, 1, 1};
     iter = 1;
 
     pid_index = 0;  // 0:Kp, 1:Kd, Ki:2
-    n_iter = 2000;
+    n_iter = 200;
 
     diff_cte = 0;
     incr_cte = 0; 
