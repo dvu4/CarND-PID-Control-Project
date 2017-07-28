@@ -37,25 +37,23 @@ int main()
   PID pid_steering;
   PID pid_throttle;
   // TODO: Initialize the pid variable.
-  //pid.Init(0.03, 0.5, 0.10);
+  // No D parameter
+  //pid_steering.Init(0.15, 0.0002, 0.0);
+  //pid_throttle.Init(0.3, 0.0002, 0.0);
 
+  // No I parameter
+  //pid_steering.Init(0.15, 0.000, 3.0);
+  //pid_throttle.Init(0.3, 0.000, 0.02);
 
-  //pid_steering.Init(0.085, 0.0003, 1.35);
-  //pid_throttle.Init(0.2, 0.0000, 0.01);
+  //pid_steering.Init(0.1, 0.0002, 3.0);
+  //pid_throttle.Init(0.3, 0.0002, 0.02);
 
-  // twiddle update - error: 803.649
-  //pid_steering.Init(0.134611 0.000276054, 3.0903);
-  //pid_throttle.Init(0.316731, 0.0000, 0.0228911);
-
-  // twiddle update - error: 782.494 - max throttle 0.7
-  // pid_steering.Init(0.134611, 0.000270736, 3.05349);
-  // pid_throttle.Init(0.316731, 0.0000, 0.0226185);
 
   // twiddle update - error:  - max throttle 0.8
-  //pid_steering.Init(0.134611, 0.000270736, 3.05349); 
-  //pid_throttle.Init(0.316731, 0.0000, 0.0226185); 
-  pid_steering.Init(0.125, 0.0001, 2.0);
-  pid_throttle.Init(0.1, 0.0001, 0.5);
+  pid_steering.Init(0.134611, 0.000270736, 3.05349); 
+  pid_throttle.Init(0.316731, 0.00002, 0.0226185); 
+  //pid_steering.Init(0.125, 0.0001, 3.0);
+  //pid_throttle.Init(0.1, 0.0001, 0.5);
 
 
  
