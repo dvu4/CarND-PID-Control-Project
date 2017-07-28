@@ -25,8 +25,15 @@ I then implemented Twiddle algorithm to get decent total error for the hyperpara
 To maximize the car's speed on the track, the PID controller for the throttle is implemented and fine tuned using the same twiddle loop.
 The final weights in the PID controller for the throttle: Kp = 0.3, Ki = 0.0002, Kd = 0.02
 
-[![ScreenShot](./image/PID_without_I.png)](https://youtu.be/DhYBeOVQ70k)
+
+
+[Video for P only](https://youtu.be/DhYBeOVQ70k)
 [![ScreenShot](./image/pid_without_D.png)](https://youtu.be/RISa6Yoyb-o)
+
+[Video for PD only](https://youtu.be/DhYBeOVQ70k)
+[![ScreenShot](./image/PID_without_I.png)](https://youtu.be/DhYBeOVQ70k)
+
+[Video for PID](https://youtu.be/DhYBeOVQ70k)
 [![ScreenShot](./image/PID_final.png)](https://youtu.be/PdMRhjHcAoc)
 ---
 
